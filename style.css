@@ -1,9 +1,18 @@
+html{
+  scroll-behavior:smooth;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Poppins, sans-serif;
 }
+
+.topheader {
+  background-color: #838d96;
+  height: 23px;
+}
+
 .header-1 {
   display: flex;
   justify-content: space-around;
@@ -41,20 +50,17 @@
 .hero {
   height: 100vh;
   width: 100%;
-  background: url(/CSS/project_singlepage/image/hero\ 1-1.jpg) center center/cover;
+  background: url(/image/hero\ 1-1.jpg) center center/cover;
 }
 .hero .header-2 {
   height: 80px;
   width: 70%;
   display: flex;
-
-  position:relative;
-  position:relative;
+  position: relative;
   margin-left: 40px;
   left: 160px;
   top: -15px;
   z-index: 4;
-
   background-color: rgb(255, 255, 255);
   justify-content: space-around;
   align-items: center;
@@ -112,10 +118,10 @@
   margin-bottom: 50px;
 }
 
-#hamburger{
+#hamburger {
   display: none;
 }
-#click{
+#click {
   display: none;
 }
 
@@ -342,12 +348,11 @@
 
 /* ------------------SECTION :- DESTINATION------------------------------------ */
 
-.destination{
+.destination {
   margin-bottom: 150px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
   padding-bottom: 100px;
-
 }
 .destination .text {
   text-align: center;
@@ -359,7 +364,6 @@
   margin-bottom: 7px;
   font-weight: 600;
   font-size: 16px;
-
   line-height: 1.2;
 }
 
@@ -371,60 +375,79 @@
   letter-spacing: 2px;
 }
 
-
 .destination .photos_main_div {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-   
-  /* padding-top: 48px;
-  padding-bottom: 16px; */
- 
+  justify-items: center;
   width: 100%;
-  gap: 20px;
-  
-
-  
+  gap: 40px;
 }
 
-
-.destination .photos_main_div .photos{
+.destination .photos_main_div .photos {
   display: flex;
   align-items: center;
-  justify-content: center ;
+  justify-content: center;
   flex-direction: column;
 }
 
 .destination .photos_main_div .photos img {
-
-  height:100%;
+  height: 100%;
   width: 100%;
+  transition: all 2s ease;
 }
 
-.destination .photos_main_div .photos img:hover{
-  padding: 10px;
+.destination .photos_main_div .photos img:hover {
+  /* padding: 10px; */
+  transform: scale(1.1);
 }
 
-
-.destination  .photos_main_div .city-detail-text{
-  margin-top:10px;
+.destination .photos_main_div .city-detail-text {
+  margin-top: 10px;
   text-align: center;
   text-decoration: none;
-  color:#495057;
+  color: #495057;
 }
 
-.destination  .photos_main_div .city-detail-text:hover{
+.destination .photos_main_div .city-detail-text:hover {
   color: red;
 }
 
-*-------------------- SECTION :- SERVICES ----------------------------*/
+.V-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
 
+  gap: 30px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.12);
+}
+
+.V-section .text {
+  width: 50%;
+}
+.V-section .text h2 {
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.V-section .text p {
+  text-align: center;
+  font-style: italic;
+}
+
+/*--------------------
+  SECTION
+  :-
+  SERVICES
+  ----------------------------*/
 .services {
   margin-top: 140px;
   height: 500px;
 
   width: 100%;
   /* border: 4px solid rgb(202, 232, 12); */
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
 .text {
   text-align: center;
@@ -507,18 +530,6 @@ text h6 {
 .services .service_index .service_item p {
   text-align: center;
 }
-
-/*------------------ packages ------------------*/
-
-/* --------- Section :- Mega_offer---------- */
-
-/* .mage_offer{
-
-   height: 500px;
-  background:url(/CSS/project_singlepage/image/mega_offer\ pic.jpg) no-repeat center center/cover; 
-} */
-
-/* ------------------SECTION-GUIDES ---------------------*/
 
 .guides {
   height: 600px;
@@ -767,11 +778,7 @@ text h6 {
 .footer_main .main_vertical {
   margin-bottom: 3rem;
   color: rgba(255, 255, 255, 0.5);
-  /* display: flex;
-   flex-direction: column;
-  justify-content:flex-start; 
-  align-items: center;  */
-  /* text-align:center; */
+
   max-width: 25%;
   padding-left: 15px;
   padding-right: 15px;
@@ -930,3 +937,411 @@ text h6 {
   background-color: #79d30a;
 }
 
+.packages {
+  height: 1000px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.12);
+}
+
+/* ----------MEDIA QUERY---------- */
+
+/* MEDIA QUERY FOR TABLET VIEW STARTS HERE */
+
+@media screen and (max-width: 768px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  /* .topheader {
+     display: none;
+  } */
+  .header-1 {
+    display: none;
+  }
+  .hero {
+    width: auto;
+  }
+
+  .hero .header-2 {
+    display: flex;
+    justify-content: space-between;
+    left: 0px;
+    margin-left: 0px;
+    position: static;
+    width: 766px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    width: 100%;
+  }
+
+  .hero .hero-content h1 {
+    font-size: inherit;
+  }
+
+  .hero .header-2 .logo {
+    margin-left: 0px;
+  }
+  .hero .header-2 .nav ul {
+    flex-direction: column;
+    position: absolute;
+    left: 0px;
+    top: 78px;
+
+    width: 100%;
+    background-color: aliceblue;
+    display: none;
+  }
+
+  #hamburger {
+    margin-right: 20px;
+    display: block;
+  }
+
+  #click:checked ~ .hero .header-2 .nav ul {
+    display: block;
+  }
+
+  .content-durations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 180px;
+
+    position: static;
+  }
+
+  .Clients_view {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 200px;
+    gap: 20px;
+    width: auto;
+  }
+
+
+  .about-us {
+    margin-top: 602px;
+    flex-direction: column;
+    margin-top: 200px;
+    position: static;
+    /* height: 1000px; */
+    height: auto;
+  }
+  .about-us .image {
+    height: 300px;
+    position: static;
+    margin-bottom: 83px;
+  }
+  .about-us .image img {
+    margin-left: 260px;
+  }
+
+  .about-us .about-us-image {
+    margin-left: 400px;
+    margin-top: 340px;
+    position: static;
+    width: 600px;
+  }
+
+  .about-us .about-us-image about-image {
+    margin-left: 400px;
+    width: 100%;
+  }
+  .about-us .about-us-image .about-image .two_image {
+    flex-direction: column;
+  }
+
+ 
+  .about-us .image {
+    margin-left: 0px;
+    margin-right: 0px;
+    position: static;
+  }
+  .about-us .image img {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .about-us {
+    margin-top: 0px;
+  }
+  .about-us .about-us-image {
+    height: auto;
+  }
+  .about-us .about-us-image {
+    margin-left: 0px;
+    margin-top: 0px;
+    width: auto;
+  }
+  .about-us .image {
+    height: auto;
+  }
+  .about-us {
+    height: auto;
+  }
+  .facility {
+    position: static;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 100px;
+    margin-left: 69px;
+    flex-direction: column;
+  }
+  .destination {
+    width: auto;
+  }
+  .text h1 {
+    font-size: initial;
+  }
+  .destination .photos_main_div {
+    grid-template-columns: 1fr;
+  }
+  .destination .photos_main_div .photos {
+    margin-left: 0px;
+    width: 70%;
+  }
+  .services {
+    flex-wrap: wrap;
+    height: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+   
+    justify-content: start;
+   
+  }
+  .services .service_index {
+    margin-left: 0px;
+    
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+  .guides .photos {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+
+    margin-bottom: 0px;
+  }
+  .testimonial {
+    height: auto;
+    padding-bottom: 0px;
+  }
+  .contact_main {
+    height: auto;
+    flex-direction: column;
+
+    
+  }
+  .contact_main .cover {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .contact_main .cover .form form {
+    margin-left: -77px;
+  }
+  .contact_main .cover .form form .btn{
+    margin-top: -20px;
+  }
+  .cover .map {
+    margin-right: 40px;
+  }
+
+ 
+  .V-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+  }
+  .V-section .video {
+    height: auto;
+    width: auto;
+  }
+  .V-section .video iframe {
+    width: 400px;
+  }
+
+  .footer_main {
+    flex-direction: column;
+    /* font-size: 34px; */
+    height: fit-content;
+    align-items: start;
+    justify-content: start;
+  }
+  .footer_main .main_vertical h1 {
+    font-weight: x-large;
+  }
+  .footer_main .flex_column {
+    width: 500px;
+  }
+  .signup button {
+    margin-top: 0px;
+    height: 55px;
+
+    width: 128px;
+  }
+  .search input {
+    height: 55px;
+  }
+}
+
+/* MOBILE CSS STARTS HERE  */
+@media screen and (max-width: 428px) {
+  .topheader {
+    display: none;
+  }
+  .hero {
+    width: 425px;
+  }
+  .hero .header-2 {
+    width: 425px;
+    height: 109px;
+  }
+  .footer_main .flex_column {
+    width: auto;
+  }
+  .footer_main .main_vertical p{
+    width: 300px;
+  }
+  .content-durations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    margin-left: 200px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin: 10px;
+  }
+
+  .Clients_view {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 17px;
+    width: auto;
+   
+     
+  }
+
+  .about-us {
+    margin-top: 602px;
+  }
+  .about-us .image img {
+    margin-left: 260px;
+  }
+
+  .about-us .about-us-image {
+    margin-left: 400px;
+  }
+
+  .about-us .about-us-image about-image {
+    margin-left: 400px;
+  }
+  .services .service_index {
+    margin-left: 0px;
+  }
+  .about-us .about-us-image .about-image .two_image {
+    flex-direction: column;
+  }
+  .hero .header-2 {
+    position: static;
+    width: 100%;
+  }
+  .hero .hero-content h1 {
+    font-size: inherit;
+  }
+
+  .about-us .image {
+    margin-left: 0px;
+    margin-right: 0px;
+    position: static;
+  }
+  .about-us .image img {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .about-us {
+    margin-top: 0px;
+  }
+  .about-us .about-us-image {
+    height: auto;
+  }
+  .about-us .about-us-image {
+    margin-left: 0px;
+    margin-top: 0px;
+    width: auto;
+  }
+  .about-us .image {
+    height: auto;
+  }
+  .about-us {
+    height: auto;
+  }
+  .facility {
+    position: static;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 100px;
+  }
+  .destination {
+    width: auto;
+  }
+  .text h1 {
+    font-size: initial;
+  }
+  .destination .photos_main_div .photos {
+    margin-left: 0px;
+    width: 70%;
+  }
+  .services .service_index {
+    align-items: center;
+    justify-content: center;
+    width: auto;
+  }
+  #services .service_index {
+    justify-content: center;
+    align-items: center;
+  }
+  #services {
+    flex-wrap: nowrap;
+    height: auto;
+  }
+  .guides .photos {
+    width: 100%;
+    grid-template-columns: 1fr;
+    margin-bottom: 0px;
+  }
+  .testimonial {
+    height: auto;
+    padding-bottom: 0px;
+  }
+  .contact_main {
+    height: auto;
+  }
+  .map {
+    display: none;
+  }
+}
